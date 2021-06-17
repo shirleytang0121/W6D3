@@ -3,10 +3,10 @@ Rails.application.routes.draw do
   
   resources :users, only: [:show, :index, :create, :update, :destroy]
 
-  resources :artwork_shares, only: [:show, :index, :create, :update, :destroy]
+  resources :artwork_shares, only: [:create, :destroy]
   resources :artworks, only: [:show, :index, :create, :update, :destroy]
 
-  # get "/users", to: "users#index"
+  get "/artwork_shares/:id", to: "artwork_shares#index"
   # post "/users", to: "users#create", as: "new_user"
   # get "/users", to: "users#new"
   # get "/users/:id", to: "users#edit"
