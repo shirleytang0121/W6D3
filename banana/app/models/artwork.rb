@@ -15,6 +15,12 @@ class Artwork < ApplicationRecord
         through: :viewers,
         source: :viewer
 
+
+    has_many :comments,
+        foreign_key: :artwork_id,
+        class_name: :Comment,
+        dependent: :destroy
+
     #create a class method which returns 
     #ALL of the artworks made by the user and shared by the user
     
