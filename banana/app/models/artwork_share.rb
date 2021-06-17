@@ -1,4 +1,4 @@
-class ArtworkShare < ApplicatonRecord
+class ArtworkShare < ApplicationRecord
 
     belongs_to :artwork,
         foreign_key: :artwork_id,
