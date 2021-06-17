@@ -1,0 +1,6 @@
+class ArtworkSharesController < ApplicationController
+
+    
+
+
+end
