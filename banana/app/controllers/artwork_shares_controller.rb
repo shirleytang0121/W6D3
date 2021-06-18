@@ -1,6 +1,6 @@
 class ArtworkSharesController < ApplicationController
     def index
-        @artwork_shares=ArtworkShare.find_by(viewer_id: params[:id]) || 'the user did not view any artworks'
+        @artwork_shares=ArtworkShare.where(viewer_id: params[:id]) || 'the user did not view any artworks'
         render json: @artwork_shares
     end
 

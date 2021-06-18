@@ -8,4 +8,5 @@ class ArtworkShare < ApplicationRecord
         foreign_key: :viewer_id,
         class_name: 'User'
 
+    
 end

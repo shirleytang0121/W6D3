@@ -7,12 +7,13 @@ Rails.application.routes.draw do
 
   resources :artworks, only: [:show, :create, :update, :destroy]
 
-  resources :comments, only: [:index, :destroy,:create]
+  resources :comments, only: [:index,:destroy,:create]
 
   get "/artwork_shares/:id", to: "artwork_shares#index"
   get "/users/:user_id/artworks", to: "artworks#index"
 
-
+  # get "/comments/:id", to: "comments#index"
+  #get "/users/:user_id/artworks/:artwork_id/comments", to: "comments#index" 
   # post "/users", to: "users#create", as: "new_user"
   # get "/users", to: "users#new"
   # get "/users/:id", to: "users#edit"

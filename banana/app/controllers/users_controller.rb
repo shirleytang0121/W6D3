@@ -1,8 +1,11 @@
 class UsersController < ApplicationController
 
     def index
-        @users = User.all
-
+        if params[:username]
+            @users = User.where(username: params[:username])
+        else
+            @users = User.all
+        end
         render json: @users
     end
 

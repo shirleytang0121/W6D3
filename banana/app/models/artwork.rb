@@ -21,6 +21,10 @@ class Artwork < ApplicationRecord
         class_name: :Comment,
         dependent: :destroy
 
+    has_many :likes,
+        as: :likeable
+
+
     #create a class method which returns 
     #ALL of the artworks made by the user and shared by the user
     
